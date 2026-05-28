@@ -1,44 +1,98 @@
-<<<<<<< HEAD
-# Ai_Repo_Summarizer
-=======
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
+
+# AI Repo Summarizer
+
+AI Repo Summarizer is a web app that uses AI to analyze and summarize GitHub repositories. Enter a repo URL and get a beginner-friendly overview, tech stack, architecture, and more.
+
+---
+
+## Features
+
+- **Summarize any public GitHub repo**: Get an instant, readable summary.
+- **Beginner-friendly explanations**: Understand complex projects easily.
+- **Ask questions**: Chat with the AI about the repo.
+- **Modern UI**: Built with Next.js, React, and Tailwind CSS.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [Python 3.10+](https://www.python.org/)
+- [pip](https://pip.pypa.io/en/stable/)
+
+### 1. Install dependencies
+
+In the project folder, run:
+
+```bash
+npm install
+```
+
+### 2. Start the backend (FastAPI)
+
+1. Go to the backend folder:
+    ```bash
+    cd backend
+    ```
+2. Install Python dependencies:
+    ```bash
+    pip install fastapi uvicorn requests groq pydantic
+    ```
+3. Start the backend server:
+    ```bash
+    uvicorn main:app --reload
+    ```
+
+### 3. Start the frontend (Next.js)
+
+Open a new terminal in the project root and run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+1. Enter a GitHub repository URL (e.g., `https://github.com/vercel/next.js`).
+2. Click "Analyze" to get a summary.
+3. Ask questions about the repo for more details.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- app — Next.js frontend
+- backend — FastAPI backend (Python)
+- public — Static assets (icons, images)
+- README.md — This file
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# AI_Repo_Summarizer
->>>>>>> 897bacc31a9e7892e5965886933a94c061ec55a8
->>>>>>> 3d47abb (Clean commit)
+- **Frontend:** Next.js, React, Tailwind CSS, React-Markdown
+- **Backend:** FastAPI, Python, Groq AI
+
+---
+
+## Troubleshooting
+
+- Make sure both backend and frontend servers are running.
+- The backend runs on port 8000 by default.
+- The frontend runs on port 3000 by default.
+- If you see CORS errors, check that the backend allows requests from the frontend.
+
+---
+
+## License
+
+MIT
+
+---
